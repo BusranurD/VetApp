@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+   <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+    <h5>FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</h5>
+    <p>FIV retrovirus gurubundan bir lentivirustur. Kedilerde bağışıklık mekanizmasını baskılayarak öldürücü bir hastalık oluşturmaktadır. Hastalık bu yönüyle “Kedi AIDS’i” ya da “kedilerin edinsel bağışıklık yetmezliği” olarak da adlandırılır. FIV sadece kedilerde AIDS’e neden olur; yani insanlarda hastalık yapma olasılığı yoktur.</p>
+
+    <h5>Hastalığın Belirtileri</h5>
+    <p>Kedilerde FIV enfeksiyonu üç evrelidir. Bunlar; Akut, latent (gizli) ve kronik faz evreleridir.
+        • Akut faz birkaç gün sürebilir. Ateş, ishal, lenfadenopati (lenf yumrularının şişmesi) ve sepsis gibi genel semptomlar görülür.
+        • Latent faz, süresi değişken en önemli safhadır. Bu dönemde hayvan semptom göstermeden virus saçtığı için diğer kediler için çok tehlikelidir.
+        • Kronik faz 1-6 ay arası sürebilir. Bu evrede kedi immun yetersizlik nedeniyle enfeksiyonlara karşı son derece savunmasızdır. Hemen hemen vücudun tüm sistemleri etkilenir. Solunum sistemi enfeksiyonları, dermatitis, kusma, ishal, kilo kaybı, ateş, neoplazi, sinir sistemine ait bulgular, göze ait problemler, böbrek hastalıkları görülür. Kronik stomatitis ve gingivitis en sık rastlanılan bulgulardır.
+        
+        Etken olan virüs, organizmaya girdikten sonra bağışıklık sistemini etkisiz hale getirir ve metabolizmanın dış etkenlere karşı olan direncini ortadan kaldırır. Böylece çok çeşitli enfeksiyonlar ve hatta kimi bireylerde kansere varan birbirinden farklı semptomlarla seyreden tablolar oluşur. Bu sebepledir ki her FIV hastası aynı belirtilerle gözlemlenemeyebilir. Ortak olan belirtiler ise genelde zaman içerisinde sıralı bir seyir takip eder. Etkenin vücuda girişi ile birlikte 1-2 ay kadar süren akut devrede beden ısısındaki artış ve lenf yumrularının büyümesi dışında semptom görülmez. Hastalığın kendini gizlediği, lenf yumrularının büyümüş olmasına rağmen genel durumun olumlu olduğu latent faz ise yıllarca sürebilir ve bu devredeki bir kedi hastalığı popülâsyondaki diğer bireylere bulaştırabilir. Son aşama birkaç ay sürer; kilo kaybı ile birlikte çeşitli enfeksiyonların etkilediği organ sistemleri kendilerine özgü belirtileri ve tümöral oluşumları meydana getirirler.</p>
+
+    <h5>Hastalığın Teşhisi</h5>
+    <p>Ev kedimizin FIV yönünden durumunu tespit etmek amacıyla ELISA testi, pozitif sonuç verdiği takdirde ise doğrulamak maksadı ile Western Blot testi uygulanır. Buna rağmen hatalı pozitif sonuçlar bildirilmiş olmasından ötürü, nihai sonucun da kesinliğinden emin olmak için testlerin 2-3 ay sonra tekrarlanmasında fayda vardır.</p>
+
+    <h5>Hastalığın Tedavisi</h5>
+    <p>Hastalığın kesin bir tedavisi olmamakla birlikte hasta hayvanlara yaşamsal fonksiyonlarını devam ettirmek, bağışıklık sistemlerini güçlendirmek ve ikincil enfeksiyonlara karşı korumak amacıyla destek tedavi uygulanır.
+        Kedimizin ev dışı yaşantısı varsa, sokak popülasyonlarındaki hastalık oranının %15'lere kadar ulaşabildiğini göz önüne alarak koruma sağlamak yerinde bir tedbir olacaktır. Bu amaçla veteriner hekiminizin öngördüğü bir FIV aşılama programı uygulanabilir. Ancak ve mutlaka aşılama öncesinde test yapılması gereklidir. Ortaya çıkan hastalık tablosunda müdahale ve tedavi doğal olarak FIV'e değil semptomlara göre yapılacaktır. Ancak unutulmamalıdır ki özellikle bu hastalıkta sevgi ve ilgi ayrı bir önem arz eder. Nitekim AIDS'e yakalanmış kediler doğru yaklaşımlarla, uzun yıllar yaşayabilmektedirler. Yapılması gereken, asla moral bozmadan, kuvvetli beslenmenin, hastalık kapabileceği kedilerden izole temiz ve güvenli yaşam ortamının, düzenli aşılamanın, enfeksiyon durumunda ısrarcı ilaç mücadelesinin, bağışıklık sistemini yüksek tutacak vitamin ve biyolojik madde desteğinin birlikte sağlandığı iyi bir bakımdan ibarettir.</p>
+
+    <h5>Hastalığın Bulaşma Yolları</h5>
+    <p>Kediler arasında bulaşma görülür; insanlara asla bulaşmaz.
+        FIV yoğun olarak vücut sıvılarında bulunur. Salya ile etrafa yayılır ve ısırık yarası ile bulaşır. Bu nedenle virüs, en çok kavga veya çiftleşmelerin etkisiyle kediler arasında yayılma olanağı bulur.
+        Erkek kedilerde hastalığın görülme oranı dişilere oranla 2 kat fazladır. FIV’in yavrulara uterusta bulaşması ya da sütle bulaşması nadirdir.</p>
+
+
+    <h5>Korunma ve Aşılama</h5>
+    <p>Hastalığın kesin bir tedavisi yoktur.
+        Anti viral ilaçlarla yapılan tedavi virüs çoğalmasını azaltmak ve hayvana biraz daha uzun ve kaliteli bir yaşam sağlamaya yöneliktir.
+        Sağlıklı kedilerinizi ise uygun aşılama programıyla hastalıktan uzak tutabilmektesiniz.</p>
+	
+</div>
+</th:block>
+
+</html>

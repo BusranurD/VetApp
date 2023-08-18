@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+   <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+   <h5>Köpek Nezlesi (Canine Parainfluenza)</h5>
+   <p>Bulaşıcı bir solunum yolu hastalığı olup, köpeklerin sık ve bir arada bakıldığı barınak, pet mağazası gibi yerlerde yaygın görülür. Canine Parainfluenza virüsü tek başına her zaman ölümcül olmasa da barınak hastalığı ile birleştiğinde sonu genellikle ölümdür. Bu viral enfeksiyon solunum sisteminde orta dereceli bir yangıya neden olur. Ancak CAV-2 virüsü ve Bordetalla bronchiseptica bakterisi ile kombine halde çok şiddetli ve ölümcül enfeksiyonlara neden olurlar.</p>
+
+   <h5>Hastalık Belirtileri</h5>
+   <p>- Kuru öksürük<br>
+    - İştahsızlık<br>
+    - Depresyon<br>
+    - Burun ve göz akıntısı</p>
+
+   <h5>Hastalığın Teşhisi</h5>
+   <p>Hastalığın tanısı çoğunlukla klinik semptonlara göre belirlenir. Tipik belirtiler gösteren olaylarda hastalığın tanımı zor değildir. Özellikle kuru öksürük, burun ve göz akıntısı en önemli belirtilerdir.</p>
+
+   <h5>Bulaşma Yolları</h5>
+   <p>Enfekte olmuş köpeğin vücut sıvısı ve solunumundan bulaşır. Kapalı yerlerde tutulan, barınak, petshop gibi yerlerde sıkça görülür.</p>
+
+   <h5>HAstalığın Tedavisi</h5>
+   <p>Bu solunum yolu hastalığı insanlardaki soğuk algınlığına benzer belirtiler üretir. Hastalık, erken aşamadayken ilaç ve iyi bakımla tedavi edilebilir.</p>
+
+   <h5>Korunma ve Aşı</h5>
+   <p>İlk aşılara, köpeğin 6 haftalık olmasından itibaren bir dizi halinde başlanır. Yıllık olarak yapılan 2. dozlar bunu takip eder.</p>
+</div>
+</th:block>
+
+</html>

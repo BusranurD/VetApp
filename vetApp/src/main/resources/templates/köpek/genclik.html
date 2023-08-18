@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+           <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+   <h5>Distemper (Köpek Gençlik Hastalığı)</h5>
+   <p>Hastalık etkeninin bilimsel adı Canine Distemper Virus‘tur. Köpekler için oldukça bulaşıcı ve öldürücü bir hastalıktır. Tüm viral enfeksiyonlarda olduğu gibi hücrelerin içerisinde aktif hale gelerek hastalık oluşturan bir etkeni antibiyotikler ile yok etmek mümkün olmadığından öncelikli olarak hastalıkla mücadele yolu aşılama olmalıdır. Antibiyotik tedavisi ise diğer bakteriyel enfeksiyonların önlenmesi için uygulanmaktadır.
+    Canine Distemper Virüsü ayrıca çakal, kurt, tilki, rakun ve aslan gibi vahşi hayvanlarda da hastalık oluşturabilmektedir.
+    
+    Gençlik Hastalığı; dünya köpek popülasyonu için en tehlikeli hastalıktır. Hastalığa yakalanan yavrularda ölüm oranı yüzde seksen civarındadır. Hastalıktan en fazla etkilenen yaş grubu 3-8 aylık yaştaki köpeklerdir. Aşılanmamış yetişkin köpekler de gençlik hastalığına yakalanabilir. Ölüm oranı yavrular kadar olmamakla birlikte, yetişkin köpekler için ciddi bir tehlike oluşturmaktadır.</p>
+
+   <h5>Distemper Formları</h5>
+   <p>Distemper etkeninin yerleştiği doku veya organa göre klinik semptomları birbirinden farklı formlarda ortaya çıkar.
+    Klinik Olarak Hastalığın 5 Formu Vardır.
+    <br>1-Göz Formu<br>
+    2-Broncho – Pneümoni Formu (Akciğerle nefes borularının İltihabı)<br>
+    3-Gastro-intestinal Formu (Mide ve Bağırsakların İltihabı)<br>
+    4-Deri Formu<br>
+    5-Sinirsel Form<br>
+    Hastalık yalnız bir formda görülmez. Bir köpekte en az 2 veya daha çok formla birlikte seyreder.
+    <br>
+    1-Göz Formu
+    Gözde sulu, sümüklü ve çoğunlukla irinli ve balgamlı bir akıntı vardır. Göz kapaklarının içi kirli kırmızıdır. İrinli ve balgamlı akıntı nedeniyle göz kapakları birbirine yapışabilir. Ateş ve ışıktan korkma dikkati çeker. Bu formda genellikle öksürük, ishal, kusma, iştahsızlık, dehidrasyon, zayıflama görülür.
+    <br>
+    2-Broncho-Pneumoni Formu (Akciğer Formu - Sekunder Enfeksiyon Form)
+    Önce irinle ve balgamlı bir burun akıntısı meydana gelir. İştah azalır, hayvan durgunlaşır, ateş, aksırık ve öksürük görülür. Sonrada akciğer ve nefes borularında iltihaplanma tablosu görülür.
+    <br>
+    3-Gastro-intestinal Formu (Mide ve Bağırsakların İltihabı)
+    Genellikle broncho-pneumotik şekilde birlikte seyrederler. Kusma, kanlı veya köpüklü ishal dikkati çeker. İştahsızlık, bitkinlik, kusma, dehidrasyon, zayıflama görülür.
+    <br>
+    4-Deri Formu
+    Hayvanların tüysüz yerlerinde özellikle ayakların iç tarafları ve karın bölgesinde oluşan enfeksiyon hastalıklarda görülen deri üzerindeki kızartı veya lekeler ve kabarcıklarla karakterizedir. Önceleri mercimek veya daha büyük yumurtalar kuruyup dökülerek yerinde kırmızı lekeler görülür.
+    <br>
+    5-Sinirsel Form
+    Bu form yukarıdakilerden sonra veya direkt olarak ortaya çıkar. Belirli kas gruplarında tikler oluşur. Bu kronik kramplar en çok bacak, yanak ve dudak kaslarında görülür. Kramplar şakak kaslarında ve kulak arasındaki kaslarda görülürse hastalığın seyri iyi değildir. Köpüklü salya akıtılması çiğneme kaslarının kramplarından olur. Köpeğin dişleri birbirine çarpar, sürekli net sesle havlar, hatta saatlerce inler. Bazen sara benzeri nöbetler ile tüm vücut titrer. Meydana gelen tikler hayvan iyileşse bile tüm hayatı boyunca kalır. Yürümede dengesizlik ve sonucunda felçler oluşur.
+    Sinirsel form distempere geçmiş hastalıktan kurtulma oranı oldukça düşüktür. Ölüm çok sancılı ve içler acısı olmaktadır.</p>
+
+   <h5>Hastalığın Teşhisi</h5>
+   <p>Hastalığın tanısı çoğunlukla klinik semptonlara göre belirlenir. Tipik belirtiler gösteren olaylarda hastalığın tanımı zor değildir. Özellikle aşılanmamış genç köpeklerde ya da aşılanmasına dair bilgi bulunmayan yaşlı köpeklerde ateş, öksürük, ishal, ayakların altında pullanma, deri kalınlaşması, deri döküntüsü ve nörolojik semptomlar distempere işaret eder.
+<br>
+    Distemper Hastalığı; Kuduz, Köpek Hepatiti, Leptospirosis ve Toxoplasma Gondii ile karışabilir. Genel belirtiler haricinde klinik muayenesi hastalığa teşhis koymak için kesin belirleyicidir.</p>
+
+   <h5>Bulaşma Yolları</h5>
+   <p>Virüsün genel olarak bulaşması hastalığı taşıyan hayvanların yaymış oldukları vücut sıvılarında bulunan etkenin genellikle solunum yolu ile alınmasıyla gerçekleşmektedir. Ancak hastalık etkeninin bulaşmış olduğu kap vb materyallerden de bulaşma gerçekleşebilmektedir. Aynı ortamda bulunan hasta köpeğin solunumundan da hastalık bulaşır. Soğuk hava şartları bulaşma için daha elverişlidir.</p>
+
+   <h5>Korunma ve Aşı</h5>
+   <p>Aşılamada yavru köpeklerin 16 haftalık yaşa ulaşmadan önce gençlik hastalığı aşılarının (karma aşı) tamamlanmış olması gerekmektedir. Aşılı annelerin yavruları ilk 16 hafta anne sütü ile korunmakta! Ancak 16 haftalık olmadan aşılama şarttır.
+    Canlı çoğunlukla başka hastalık etkenlerine karşı da açık konuma geldiğinden hastalığın teşhisi daha da karmaşık bir hal alabilir.
+    Aşılama en önemli ve tek koruyucudur. Önerilen aşılama programı yavru 5-7 haftalık olduğu zaman ilk doz ve 3-4 hafta aralıklarla yavru 14 haftalık oluncaya kadar aşı yapılmalıdır. Yıllık aşı tekrarı, antikor düzeyi koruyucu seviyenin altına düştüğü zaman uygulanmalıdır.
+    Aşılama, gençlik hastalığına karşı %99 oranında koruma sağlamaktadır. Ayrıca koruma için en önemli noktalardan biri, köpeğinizin aşıları tamamlanmadan, annesi ve kardeşleri dışında yabancı köpeklerle olan teması önlenmelidir.</p>
+
+</div>
+</th:block>
+
+</html>

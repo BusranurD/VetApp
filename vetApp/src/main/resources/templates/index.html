@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp - Admin</title>
+</head>
+
+<th:block layout:fragment="content">
+<div class="container">
+
+<br><br><br>
+<ul id="menu">
+
+	<li><a th:href="@{/patient/search}" role="button">Evcil Hayvan Ara</a>
+    </li>
+	<li><a th:href="@{/user/search}" role="button">Evcil Hayvan Sahibi Ara</a>
+    </li>
+
+</ul> <br> <br>
+    <span layout:insert="patients"></span>
+</div>
+</th:block>
+
+</html>

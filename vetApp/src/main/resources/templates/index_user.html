@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container" th:each=" user , i : ${user}">
+
+<br><br><br>
+<ul id="menu">
+
+<li><a style="color: white;"  th:href="@{/profile/{id}(id=${user.id})}" role="button">Profil</a></li>
+<li><a style="color: white;" th:href="@{/patient/register}" role="button">Evcil Hayvan Ekle</a></li>
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul >
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul class="submenu">
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+</div>
+</th:block>
+
+</html>

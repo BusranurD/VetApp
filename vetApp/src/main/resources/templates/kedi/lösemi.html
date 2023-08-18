@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+           <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+    <h5>Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</h5>
+    <p>Kedilerin viral lösemi hastalığı (FeLV), kedilerde bağışıklık sisteminin düşmesi ve dokularda tümöral oluşumlara yol açan, retrovirüs grubu virüslerin neden olduğu bir hastalıktır. Hastalık insanlara bulaşmaz ancak hastalığa yakalanmış kedilerin salya, gözyaşı, idrar, dışkı ve kanlarıyla sağlıklı kedilere bulaşabilir. Bu nedenle kedi lösemisine yakalanan bir kedi ile ilişki halinde olan veya ısırma ile sonuçlanan bir kavga yaşayan kedinin bu hastalığa yakalanma olasılığı yüksektir.
+        Dört aylıktan küçük yavru kedilerde hastalığa yakalanma riski daha fazladır.</p>
+    <h5>Hastalığın Belirtileri</h5>
+    <p>Üreme bozuklukları
+        İdrar kaçırma
+        Alt çene kemiği lenf yumrularında lymphadenopati
+        Sekunder enfeksiyonlar nedeni ile immunosuppresion
+        Geri dönüşümsüz anemi
+        Loykosarcom oldukça sık olarak görülür.
+        Kemik iliğinde ciddi azalma</p>
+    <h5>Hastalığın Teşhisi</h5>
+    <p>Hastalığın kesin teşhisi kan örneklerinden ELISA testi yapılarak konulmaktadır.</p>
+    <h5>Hastalığın Tedavisi</h5>
+    <p>Hastalığın kesin bir tedavisi olmamakla birlikte hasta hayvanlara yaşamsal fonksiyonlarını devam ettirmek, bağışıklık sistemlerini güçlendirmek ve ikincil enfeksiyonlara karşı korumak amacıyla destek tedavi uygulanır. FeLV pozitif kedilerin uygun bakım, beslenme ve stresten uzak bir bakımla yaşam süreleri uzamaktadır.</p>
+
+    <h5>Bulaşma Yolları</h5>
+    <p>Kediler arasında bulaşma kolaydır. Salya , gözyaşı gibi vücut sıvılarında bulunan virus bir arada yaşayan kediler arasında , birbirlerini yalarken , aynı mama ve tuvalet kabını kullanırken , kavga esnasında ısırık yaralarıyla da bulaşabilmektedir.Ayrıca kan nakli ile de bulaşma söz konusudur. Virüsün bulaştığı her kedide enfeksiyon görülmeyebilir.Virüse maruz kalan kedide oluşabilecek muhtemel senaryolar;
+        • Kedilerin yaklaşık %30'u enfeksiyona karşı koyar ve virüsü yener.Bu kediler bir süre içinde FeLV'e karşı bağışıklık kazanabilir.
+        • Kedilerin yaklaşık %30'u taşıyıcı rol oynamaktadır.Salyayla hastalığı şaçar.
+        • Kedi enfekte olur. Vücut direncine bağlı olarak bir süre içinde hayatını kaybeder.</p>
+    <h5>Korunma ve Aşılama</h5>
+    <p>Hastalığın kesin bir tedavisi yoktur. Bilinen tek önlem aşılamadır.
+        Sağlıklı kedilerimizi uygun aşılama programıyla hastalıktan uzak tutmak mümkündür. Yavru kedilerde 9- 10 haftalık olduklarında ilk aşılama yapılabilir.İlk aşılamadan 3-4 hafta sonra ikinci doz aşılama yapılır. Sonraki tekrarları ise senede bir kez yapılarak etkili bağışıklık sağlanabilmektedir.</p>
+    </div>
+</th:block>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+          <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+    <h5>Kedi Gribi (Viral Solunum Yolu Enfeksiyonu - Feline Herpes)</h5>
+    <p>Kedi gribi ya da diğer adıyla kedi nezlesi; özellikle yavru kedilerde etkilerini göstererek solunum yollarında çoğalma gösteren enfeksiyon türlerinden biridir. Kedilerde son derece rahatsızlık veren ve tehlike yaratan bir hastalıktır. Kedi gribi zoonoz bir hastalık değildir; insanlara bulaşmaz.
+        Özellikle yavru kediler için önemli olan üst solunum yolu hastalıklarının çoğu Herpervirus ve Calicivirus tarafından bir kısmı da Chlamydia, Pasteurella ve Mycoplasmalar tarfından meydana getirilmektedir.Hastalığa sebep olan bu viruslar türe spesifiktir insana yada bir başka cins hayvana (köpek, kuş)bulaşmamaktadır.
+        </p>
+
+    <h5>Hastalığın Belirtileri</h5>
+    <p>Hapşırma, burun akıntısı, göz akıntısı, öksürük, ağız ve burun mukozasında yaralar, hırıltılı solunum, ateş, ses değişikliği en sık görülen belirtilerdir. Bunlarla beraber yoğun burun akıntısına bağlı burunda tıkanıklık nefes almada güçlük, yoğun göz akıntısına bağlı göz kapaklarında çapaklanmayla beraber kapanma gözlenir.</p>
+
+    <h5>Hastalığın Teşhisi</h5>
+    <p>Kimyasal kan profili, tam bir kan sayımı (hemogram) ve bir idrar tahlili de dahil olmak üzere tam bir kan profiline bakılır. Bununla birlikte, bu testlerin sonuçları spesifik değildir ve başlangıçtaki tanı için tutarlı bulgular sağlamazlar.
+        Daha güvenilir bir teşhis için, FCV antikorlarının birikimine bakılabilir.
+        Kullanılabilecek daha ileri bir test, hücre kültürü adı verilen bir teknik kullanılarak, izole edilmiş ayrılmış virüslerin kontrollü koşullar altında büyütülmesini içerir.
+        Akciğerlerdeki herhangi bir hasarı saptamak için Göğüs röntgenleri, akciğer zatürre mikrobu bulunan kedilerde akciğer dokusunun konsolidasyonuna da bakılabilir.
+        </p>
+
+    <h5>Hastalığın Tedavisi</h5>
+    <p>Hastalık viral kaynaklı olduğu için net bir tedavisi olmamakla birlikte, yoğun antibiyotik tedavisi ile vitamin takviyesi yapılmaktadır. Ayrıca göz için pansuman ve antibiyotikli damla, ağızdaki yaralar için ağız antiseptiği, burun tıkanıklığı için burun içi solüsyonlar ve damlalar uygulanarak hastanın iyileşmesi sağlanır.</p>
+
+    <h5>Hastalığın Bulaşma Yolları</h5>
+    <p>Enfekte kedi göz, burun sıvıları aracılığıyla hastalığı diğer kedilere bulaştırmaktadır. Hapşırma, öksürme, soluma yoluyla virus ortama bırakılır. Hasta kedilerin temas ettiği eşyalar, mama kapları, tuvalet kapları, taşıma kapları ve insan eli bulaşma yolları arasında yer almaktadır. Virus uygun ortamda bir hafta canlılığını koruyabilmektedir.
+        Hastalığa yakalanmış ve geçirmiş kediler gizli taşıyıcıdırlar. Herhengi bir belirti göstermeden hastalığı yayarlar. Ayrıca vücut dirençleri düşer düşmez hastalık tekrar nüksedebilmektedir. Hamile kedilerde hamilelik ve doğum yoğun stres kaynağı olduğunda dolayı yeni doğan yavrulara daha yoğun virus salınımına bağlı bulaşma şekillenebilmektedir.
+        </p>
+
+
+    <h5>Korunma ve Aşılama</h5>
+    <p>Sağlıklı kedilerde uygulanan karma aşı bu hastalığa karşı koruma sağlamaktadır.
+        Yavru kedilerde 9-10 haftalıkken aşılama yapılabilmektedir.
+        İlk aşılamadan 3-4 hafta sonra 2.doz uygulanır.Sonrasında senelik tekrarlarla korunma sağlanır.
+        </p>
+	
+</div>
+</th:block>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+       <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+   <h5>Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</h5>
+   <p>Köpek hastalıkları içerisinde ölümle sonuçlanabilen oldukça riskli bir hastalıktır. Hastalığa neden olan parazit Dirofilaria Immitis’dir. Genellikle köpek, kedi, at, denizaslanı ve seyrek olarak da insanlarda görülen bir iç parazittir.
+    Alman Shephard, İngiliz Pointer, Golden Retriever, Boxer duyarlı ırklardır.
+    Kalp Kurdu, ülkemizde de görülebilmektedir.</p>
+
+   <h5>Kalp Kurdu Belirtileri</h5>
+   <p>Öncelikle klinik belirtilerin çoğunlukla köpeklerde görülmesinden dolayı hastalık köpeklere özgü gibi düşünülse de kedilerin de etkene karşı duyarlı olduklarını söylemekte fayda var.
+    Köpeklerde en yaygın görülen belirtiler öksürük, çabuk yorulma ve kilo kaybıdır. Bunların dışında solunum güçlüğü, ateş de görülmektedir.
+    Kedilerde ise benzer şekilde aşırı kilo kaybı, kusma, solunum güçlüğü ve öksürük gözlenir.</p>
+
+   <h5>Hastalığın Teşhisi</h5>
+   <p>anı; klinik bulgular ışığında ve şüpheli köpekten alınan kan örneğinde laboratuar incelemeleri sonucunda D.immitis mikrofilerlerinin görülmesiyle konur.
+    Knott testi, immunodiagnostik testler (ELISA) ile kesin tanı konur.
+    Teşhiste EKG’den de faydalanmaktadır.</p>
+
+   <h5>Hastalığın Tedavisi</h5>
+   <p>Sendrom oluşan sisteme yönelik sağaltım uygulanır. Tedavi, kalpte ergin parazitler oluşmadan önce yani kanda larvaların bulunduğu dönemde kullanılmasıyla mümkün olmaktadır. Semptomlardan herhangi birini gördüğünüzde, ihmal etmeden Veteriner Hekiminize danışmalı, gereken tetkik ve tedavileri uygulamakta vakit geçirmemelisiniz.
+    SağaItımdan önce köpeğin kalp, akciğer, karaciğer ve böbrek fonksiyon testleri yapılmalıdır. Eğer testler sonucunda organlarda fonksiyon bozuklukları varsa bu bozuklukları giderici önlemler alınmalıdır.
+    Parazitlere yönelik sağaItımında iki hedef vardır. Önce erişkin parazitler ortadan kaldırılır. AItı hafta sonra mikrofilerlere etkili ilaçlar kullanılır.</p>
+
+   <h5>Bulaşma Yolları</h5>
+   <p>Etken sivrisinekler tarafından taşınır. Hastalığı taşıyan sivrisinekler, köpeğinizi ısırdıkları anda, dirofilaria isimli parazitin larvalarını kas ve deri altı dokulara boşaltırlar. Bu larvalar yaklaşık 4-5 hafta sonra kan dolaşımına girerler. 3-4 ay sonunda da kalbe ulaşırlar ve gelişimlerini burada tamamlarlar. 3-4 ay içinde yumurtlamaya başlarlar ve bu yumurtalardan oluşan larvalar tekrar kan dolaşımına katılır. Bu paraziti taşıyan köpekleri ısıran sivrisinekler kandaki larvaları alır, kan emme esnasında bu paraziti taşımayan köpeklere naklederler. Parazitin yaşam döngüsü bu şekilde devam eder, fakat döngü uzun sürdüğü için semptomlar çok uzun süreler, hatta yıllar sonunda ortaya çıkar.</p>
+
+   <h5>Korunma ve Aşı</h5>
+   <p>Sonu ölümle bitme olasılığı yüksek olan bu hastalıktan korunmak için mutlaka iç ve dış parazit uygulamaları aksatılmamalı, çevrede de sivrisineklere karşı azami önlem alınması önerilmektedir.
+    Köpeklerde yapılacak koruyucu uygulamalar hem köpeklerin hastalanmasını engelleyecek, hem etken taşıyan sivrisinek sayısının azalmasını sağlayacak, hem de insanlarda hastalık oluşma riskini düşürecektir. Bu sebeple köpeğinizin hastalığa karşı korunmasını sağlamayı unutmayın!</p>
+</div>
+</th:block>
+
+</html>

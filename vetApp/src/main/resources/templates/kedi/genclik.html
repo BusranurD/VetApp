@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+   <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul >
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+    <h5>Kedilerde Gençlik Hastalığı (Panleukopenia)</h5>
+    <p>Kedilerin bulaşıcı, akut seyirli, ishal (kanlı olabilen), kusma ve ileri derecede dehidrasyona sebep olan viral hastalığıdır. Kedilerin gençlik hastalığının etkeni parvovirüstür.
+        Kedi bulaşıcı mide ve bağırsak mukozalarının ivegen yangısı veya kedi Kanlı İshal hastalığı olarak da bilinir.</p>
+
+    <h5>Hastalığın Belirtileri</h5>
+    <p>Aniden başlayan ishal ve kusma, ateş, hızla ilerleyen halsizlik durumu bizi kedilerin gençlik hastalığından şüphelendirebilir. Kediler başını su ve mama kabına uzatır ama yemek istemez. Kedi gençlik hastalığına yakalanan kedilerde karın ve çene yerde olup, ayakların vücudun altında toplandığı duruş tipiktir.</p>
+
+    <h5>Hastalığın Teşhisi</h5>
+    <p>Hızlı test kitleriyle ya da serolojik testlerle hastalığın tanısını koymak mümkündür. Ancak inaktif ve modifiye canlı aşılarla aşılanan kedilerde hatalı pozitif sonuç elde edilebilir.</p>
+
+    <h5>Hastalığın Tedavisi</h5>
+    <p>Hasta hayvanları hızla gelişen dehidrasyona karşı korumak gerekir.
+        Enfeksiyonların önüne geçilmeli ve bağışıklık sistemini güçlendirmek için immun sistem ilaçlara ağırlık verilmeli.
+        </p>
+
+    <h5>Bulaşma Yolları</h5>
+    <p>Kediden kediye yada hastalıklı kedilerin enfekte ettiği ortamlardan bulaşır. Bulaşma oranı oldukça yüksek bir hastalıktır. Virus gıda ile kirlenmiş nesneler ile temas kontamine olmuş su ve mama kapları, taşıma kafesi,kişilerin elleri ve giysileri ile bulaşabilir.
+        Ayrıca enfekte olmuş pirelerle de bulaşma olabilir.
+        Virüs çevre şartlarına oldukça dayanıklıdır. Oda sıcaklığında bir yıl canlılığını koruyabilir.
+        Virus idrar ve dışkı ile dışarı atılmaktadır. Bu yüzden hastalıklı kedinin yaşadığı ortam sık sık dezenfekte edilmelidir.</p>
+
+    <h5>Korunma ve Aşılama</h5>
+    <p>Bilinen tek önlem aşılamadır. Çünkü panleukopeni tamamen önlenebilir bir hastalıktır. Kedilerin inaktif veya modifiye edilmiş canlı aşılarla aşılanması gerekmektedir.Yavru kediler 8-10 haftalık yaşa geldiklerinde birinci aşıları, 12-14 haftalıkkende ikinci aşıları yapılır. Bundan sonra yılda bir kez aşılama yeterlidir.
+        Ancak yüksek bulaşma riskinin bulunduğu bölgelerde 16-18 haftalık yaşa ulaştıklarında üçüncü bir aşılama yapılması faydalıdır. Yavru kediler hastalık riski taşıyan diğer kedilerden ve dış ortamdan, aşılar bitene kadar uzak tutulmalıdır.</p>
+</div>
+</th:block>
+
+</html>

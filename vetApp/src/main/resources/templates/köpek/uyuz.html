@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+<head>
+    <title>FollowUp</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });
+</script>
+</head>
+<th:block layout:fragment="content">
+<div class="container">
+    <br><br><br>
+<ul id="menu">
+    <li><a style="color: white;" >Kedi Hastalıkları</a>
+    <ul >
+            <li><a th:href="@{/kedi/grip}">Kedi Gribi (Viral Solunum Yolu Enfeksiyonu)</a>
+       </li>
+            <li><a th:href="@{/kedi/fiv}">FIV-Kedi AIDS Hastalığı (Feline Immunodeficiency Virus)</a>
+       </li>
+            <li><a th:href="@{/kedi/lösemi}">Kedi Lösemi Hastalığı (Feline Leukemia Virüs)</a>
+       </li>
+            <li><a th:href="@{/kedi/genclik}">Kedilerde Gençlik Hastalığı (Panleukopenia)</a>
+  </li>
+          </ul></li>	
+    <li><a style="color: white;">Köpek Hastalıkları</a>
+    <ul>
+            <li><a th:href="@{/köpek/kalp-kurdu}">Köpeklerde Kalp Kurdu ( Dirofilaria Immitis)</a>
+       </li>
+            <li><a th:href="@{/köpek/uyuz}">Köpeklerde Uyuz</a>
+       </li>
+            <li><a th:href="@{/köpek/nezle}">Köpek Nezlesi Hastalığı (Canine Parainfluenza)</a>
+       </li>
+            <li><a th:href="@{/köpek/genclik}">Gençlik Hastalığı (Distemper Virus)</a>
+  </li>
+          </ul></li>
+</ul> <br> <br>
+   <h5>Köpeklerde Uyuz Hastalığı</h5>
+   <p>Köpek hastalıkları içerisinde çok yaygın olarak görülebilen bir deri hastalığıdır. Köpeklerde görülen uyuzun farklı çeşitleri olmakla birlikte bu hastalığa sebep olan parazitler derinin epidermis tabakası ve kıl foliküllerine yerleşebilen mikroskobik boyuttaki canlılardır.</p>
+
+   <h5>Uyuzun Belirtileri</h5>
+   <p>Kızarıklık<br>
+    Kaşıntı (Demodex türüne bağlı uyuz vakalarında kaşıntı az olabilir veya hiç görülmeyebilir)<br>
+    Tüy dökülmesi<br>
+    Deride yaralar, kabuklanma ve kepeklenme<br>
+    Deride kötü koku<br>
+    Deri renginde matlaşma <br>
+    Daha basit olarak ise köpeklerin kulağına temas edilerek veya hafifçe kulak çevresi uyarılarak yapılan pedal-pinna refleks testi adı verilen yöntemi uygulanabilir. Bu teste cevap olarak köpeğin arka ayağı ile uyarılmış olan kulağını kaşımaya başlaması bize büyük ihtimalle uyuz hastalığı olduğunu göstermektedir.</p>
+
+   <h5>Hastalığın Teşhisi</h5>
+   <p>Tüy dökülmesi görülen bölgeden deri kazıntısı yöntemiyle alınabilecek örneklerin mikroskopta incelenmesiyle görülebilecek uyuz etkenlerinin varlığı ile kesin teşhis konulabilir.</p>
+
+   <h5>Hastalığın Tedavisi</h5>
+   <p>Uyuz hastalığının tedavisi vardır ve oldukça basittir.<br>
+    Hastalığın birden çok türü olduğu için tedavi yöntemleri de farklıdır;<br>
+    Demodex: Genelde lokal bir bölgede yayılan demodex vakalarında o alanın amitraz, sulfur içeren solusyonlar, benzoyl peroksit gibi ilaçlar ile yıkanması yeterli olabilir.<br>
+    Ayrıca tüm vücuda yayılmış veya geniş bir alanı kaplayan demodex vakalarında uyuzlu bölgelerin medikal ürünlerle yıkanmasına ilave olarak benzoyl peroksit banyosu, amitraz solusyonu oral bir şekilde ivermektin etken maddesi içeren ilaç tedavisi uygulanmaktadır. Bu çok daha başarılı bir sonuç almanıza olanak sağlayacaktır.<br>
+    Demodeks’in en zor tedavi edilen şekli ise ayaklarda görülen ve bakteriyel enfeksiyonla birlikte seyreden demodectic pododermatitis ismi verilen durumdur. Uyuzun genel olarak tüm vücuda yayılmış olduğu durumlarda ve 1 yaşından küçük köpeklerde iyileşme şansı yarı yarıyadır. Uyuz hastalığının lokal olarak görüldüğü genç erişkin ve fiziki kondisyonu güçlü köpeklerde herhangi bir tedavi uygulanmasa bile 7-8 hafta içinde vakaların %80’den fazlasında iyileşme görülmektedir.</p>
+
+   <h5>Bulaşma Yolları</h5>
+   <p>Hasta hayvan ile yakın temasta bulunan köpekler öncelikli olarak bulaşma riskiyle karşı karşıyadır. Ancak direkt temas dışında da hasta köpeklerin kullanmış olduklar yemek kabı, tasma gibi malzemelerden veya bulunmuş oldukları ortamlardan da hastalığın bulaşma ihtimali olabilmektedir. Demodex etkenine bağlı uyuz vakaları zaman zaman erişkinlik dönemine erişmemiş genç köpeklerde ya da yaşlılık dönemine girmiş köpeklerde görülebilmektedir. Her iki durumda da yeterli aktivite gösteremeyen bağışıklık sistemi hastalığın oluşumunda ana rolü oynamaktadır.</p>
+
+   <h5>Korunma ve Aşı</h5>
+   <p>Uyuz hastalığı hayvanın florasında bulunan ancak bağışıklık sistemi çöktüğü zaman ortaya çıkan bir hastalıktır. Köpeğin deri sağlığı için gereken genel dış bakım uygulamaları doğru uygulandığı zaman uyuz hastalığına karşı da daha dirençli bir duruma gelmesi sağlanmış olacaktır. Köpeğin deri sağlığının korunması için gereken bakımın başında günlük olarak tımar bakımının yapılması söylenebilir. Köpeklerin deri sağlığı için çok sık yıkamaktan da kaçınmak gerektiği unutulmamalıdır. Aşırı yıkanan köpeklerde deri hastalıklara daha açık hale gelmektedir. Köpeğin bulunduğu ortamların sağlığı da etrafta ve kullandığı malzemelerde uyuz etkenlerinin bulunup bulunmaması da dikkat etmemiz gereken bir diğer konudur. Bunun için diğer köpeklerle ortak kullanılan ortam ve malzemelere dikkat edilmelidir.</p>
+</div>
+</th:block>
+
+</html>

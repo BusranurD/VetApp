@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<table layout:fragment="patients" id="patients-list" class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">İsim</th>
+        <th scope="col">Yaş</th>
+        <th scope="col">Cins</th>
+        <th scope="col">Tür</th>
+        <th scope="col">Açıklama</th>
+        <th scope="col">Sahip</th>
+        <th scope="col">İşlemler</th>
+    </tr>
+    </thead>
+    <tbody th:each="patient, iter : ${patients}">
+    <tr>
+        <th th:text="${iter.index+1}" scope="row"></th>
+        <td th:text="${patient.name}"></td>
+        <td th:text="${patient.age}"></td>
+        <td th:text="${patient.breed}"></td>
+        <td th:text="${patient.species}"></td>
+        <td th:text="${patient.description}"></td>
+        <td>
+            <a th:text="${patient.owner.getFirstName() + ' ' + patient.owner.getLastName()}"
+               th:href="@{'/user/' + ${patient.owner.getId()} + '/profile'}"></a>
+        </td>
+        <td th:if="${patient.owner.getEmail() == #authentication.name or #authorization.expression('hasRole(''ROLE_ADMIN'')')}">
+            <a th:href="@{'/patient/' + ${patient.id} + '/update'}">Güncelle</a>
+            | <a th:href="@{'/patient/' + ${patient.id} + '/delete' }">Sil</a>
+        </td>
+        <td th:if="${patient.owner.getEmail() != #authentication.name and not #authorization.expression('hasRole(''ROLE_ADMIN'')')}">
+            --
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</html>
